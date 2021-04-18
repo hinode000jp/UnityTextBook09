@@ -254,6 +254,56 @@ Gitでは、コミットを実行したときにワークツリーから直接�
 <p>Sourcetreeは多くの企業で使われているGit無料クライアントです。</p>
 <p>Sourcetreeは、Atlassian社が提供しており、GitだけでなくMercurial（hg）にも対応しています。Gitのファサードとして働き、GUIでの操作により内部でGitコマンドを実行してくれる仕組みになっています。そのため、Gitコマンドを知っておくと、内部でどのようなコマンドが実行されているのか、よりイメージしやすいでしょう。</p>
 <p>グラフィカルなインターフェイスを備えており、リポジトリの操作を視覚的に行うことができます。コマンドを打つ必要がないため、コマンドの打ち間違えが発生することもありません。また、Gitの代表的なブランチモデルのひとつである、「git-flow」に対応しています。ワンクリックでgit-flowの操作が行えるので、同ブランチモデルを採用しているプロジェクトでは非常に役立つことでしょう。</p>
+<hr>
+<p><br></p>
+<h2 id="ローカルリポジトリの作成">ローカルリポジトリの作成</h2>
+<p>まずは新規でローカルリポジトリを作成しましょう。</p>
+<p><img src="img/image1-2.png" alt></p>
+<p>SourceTreeから「新規 -&gt; ローカルリポジトリを作成」を選択してください。</p>
+<p>そして保存先を指定して作成を押してください。</p>
+<p><img src="img/image1-3.png" alt></p>
+<p>そうすると、このように新規でリポジトリが作成されました。</p>
+<p><br></p>
+<h2 id="コミットしてみる">コミットしてみる</h2>
+<p>今回は初めてのGitなので、Unityではなく簡単なHTMLファイルを作成してそちらを利用したいと思います。</p>
+<p>こちらのフォルダに新規で「index.html」ファイルを作成し、以下のコードを記述して保存してください。</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ja&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Gitテスト<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>初めてのGit<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>書き終わりましたら保存してあることを確認し、Sourcetreeを開きましょう。</p>
+<p><img src="img/image1-4.png" alt></p>
+<p>そうすると、このようにSourceTreeが変更されました。</p>
+<p><img src="img/image1-5.png" alt></p>
+<p>次にGitにコミットしたいファイルにチェックをつけます。基本的に全ての変更ファイルをコミットするかと思いますので、「保存先のファイル、パス順」というところのチェックボックスにチェックをつけていただくと全てのファイルがチェック状態になります。</p>
+<p>これがインデックスに登録状態です。</p>
+<p>最後にコミットメッセージに「first commit」と入力し、右下のコミットをクリックすればコミットは完了です。</p>
+<p><img src="img/image1-6.png" alt></p>
+<p>履歴を確認してもらうときちんと先ほどのindex.htmlファイルが登録されているのが確認できます。</p>
+<p>少しindex.htmlファイルを変更してみましょう。</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;ja&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Gitテスト<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>初めてのGit<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>変更部分<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><img src="img/image1-7.png" alt></p>
+<p>そうすると、このようにまたSourcetreeに変更が反映されますので同じようにチェックをつけてコミットメッセージを入力し、コミットをしてください。</p>
+<p><img src="img/image1-8.png" alt></p>
+<p>履歴を確認すると、このように変更内容が反映されています。</p>
 
                                 
                                 </section>
