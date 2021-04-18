@@ -2,6 +2,6 @@
 
 * [Introduction](README.md)
 
-* [Unityの軽量化について](./page1.md)
+* [Gitの基本的な使い方](./page1.md)
 
 <!-- * [VRメニューの作成](./page2.md) -->

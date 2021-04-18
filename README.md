@@ -1,10 +1,10 @@
 # Introduction
 
-![](img/unity-masterbrand-black.png)
+![](img/Git-Logo-2Color.png)
 
 ## 今回の教科書では
 
-[① アプリの軽量化について](page1.md)
+[① Gitの基本的な使い方](page1.md)
 
 <!-- [② VRメニューの作成](page2.md) -->
 

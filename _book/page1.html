@@ -1,0 +1,355 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Gitの基本的な使い方 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.19">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="page1.html">
+            
+                <a href="page1.html">
+            
+                    
+                    Gitの基本的な使い方
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Gitの基本的な使い方</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="gitの基本的な使い方">Gitの基本的な使い方</h1>
+<h2 id="gitとは">Gitとは</h2>
+<p><br></p>
+<h3 id="gitの概要">Gitの概要</h3>
+<p><img src="img/Git-Logo-2Color.png" alt></p>
+<p>Gitを簡単に説明すると、バージョン管理システム、つまり変更履歴を管理するシステムの一つです。</p>
+<p>例えば、自身で新しいWebサイトを作成しているとします。<br>そこで新しい追加機能、例えばGoogleフォームを埋め込んでみたり、地図を表示するようにしたいとします。</p>
+<p>ところが実際に実装してみたところ、うまく動かないばかりか、新機能実装前までは正常に動いていた部分までもおかしくなってしまいました。<br>とりあえず元の状態に戻そうと考えますが、だいぶコードを追加してしまったため、どこを追加したのかわからなくなってしまったとします。</p>
+<p>エディタの「戻る」ボタンでもある程度は戻れますが、一度エディタを閉じてしまうと戻れなくなってしまいます。<br>一番身近な方法としては、新機能追加前のファイルをコピーしておいて、別のフォルダなどにバックアップとして保存しておくことです。ですが、この方法だと新機能の追加やバグ修正作業のたびに新しくバックアップを作成し保存しなければなりません。また、バックアップが増えてくるとどのファイルがどの機能追加前のバックアップなのか、最新の状態はどのファイルなのかがわからなくなる可能性があります。</p>
+<p><img src="img/backup.png" alt></p>
+<p>さらに、複数人で同じプロジェクトを編集する場合、誰が最後に書き換えたのか、どこをどのように変更したのかを共有するのが大変だったり、同時に同じファイルを変更して先に編集した人のデータを消してしまうといった問題が発生するかと思います。このような問題を解決するためにGitというシステムが開発されました。</p>
+<hr>
+<h3 id="分散型バージョン管理システム">分散型バージョン管理システム</h3>
+<p>現在のバージョン管理システムは集中型バージョン管理システムと分散型バージョン管理システムがあり、Gitは分散型のバージョン管理システムの１つです。</p>
+<p>分散型と集中型の詳細の説明は省きますが、詳しく知りたい方は<a href="https://www.atmarkit.co.jp/ait/articles/1307/05/news028_3.html" target="_blank">こちら</a>をご確認ください。</p>
+<p>分散型バージョン管理システムを簡単に説明すると、ローカル環境（自分のPCなど）にも変更履歴を含む完全なリポジトリの複製を作成する仕組みのことです。</p>
+<p>ローカル環境なので、インターネットに繋がっていなくてもバージョン管理を行うことができます。</p>
+<hr>
+<h3 id="ローカルリポジトリとリモートリポジトリ">ローカルリポジトリとリモートリポジトリ</h3>
+<p>リポジトリとは直訳すると「貯蔵庫」という意味になります。</p>
+<p>バージョン管理システムで使用するリポジトリとは、そのファイルの変更履歴やファイル自体を記録しておく場所のことです。</p>
+<p>そしてこのリポジトリにはローカルリポジトリとリモートリポジトリの２つがあります。</p>
+<ul>
+<li>ローカルリポジトリ<ul>
+<li>自身のパソコンなどで使用するリポジトリ</li>
+</ul>
+</li>
+<li>リモートリポジトリ<ul>
+<li>サーバーに配置して別のパソコンや複数人で共有するためのリポジトリ</li>
+<li>ローカルリポジトリはリモートリポジトリにアップロードしなければ自分のパソコン上だけで変更履歴を管理できるので、複数人で別々の作業を効率よく行うことができます。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="gitの用語">Gitの用語</h3>
+<p>Gitを使う上で一番学習を難しくしているのが専門用語の多さです。</p>
+<p>プログラミングを学ぶ上ではどうしても専門用語を多く覚える必要があるのですが、専門用語はどの分野でも必ず必要になる知識なので少しずつ覚えていきましょう。</p>
+<p>今回はGitを使う上で必要になる基本的な用語をいくつか紹介します。</p>
+<p>|  |  |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">用語</th>
+<th style="text-align:left">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">リポジトリ</td>
+<td style="text-align:left">ファイルやディレクトリの状態を記録する場所</td>
+</tr>
+<tr>
+<td style="text-align:left">ディレクトリ</td>
+<td style="text-align:left">基本的にはフォルダと同義（厳密には違う）</td>
+</tr>
+<tr>
+<td style="text-align:left">コミット</td>
+<td style="text-align:left">ファイルやディレクトリの追加・変更をリポジトリに記録すること。コミットを行うことで変更履歴を記録できる（１つ前の状態に戻す＝１つ前のコミットに戻す）</td>
+</tr>
+<tr>
+<td style="text-align:left">ワークツリー</td>
+<td style="text-align:left">Gitの管理下に置かれたディレクトリのこと</td>
+</tr>
+<tr>
+<td style="text-align:left">インデックス</td>
+<td style="text-align:left">リポジトリにコミットする準備をする場所。リポジトリとワークツリーの間にある（ステージング・エリアとも呼ばれている）</td>
+</tr>
+</tbody>
+</table>
+<p class="point">
+Gitでは、コミットを実行したときにワークツリーから直接リポジトリ内に状態を記録するのではなく、その間にあるインデックスの設定された状態を記録するようになっています。なぜそのようになっているのかというと、ワークツリー内にあるコミットする必要のないファイルを除外したり、ファイルの一部の変更だけをコミットできるようにするためです。そのためコミットしたいファイルだけをインデックスに登録して履歴を残すシステムになりました。
+</p>
+
+<p>これ以外にもたくさん専門用語があるのですが、そちらはこの教材を通して学んでいきましょう。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Gitの基本的な使い方","level":"1.2","depth":1,"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page1.md","mtime":"2021-04-18T09:53:32.654Z","type":"markdown"},"gitbook":{"version":"3.6.19","time":"2021-04-18T09:53:45.144Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
