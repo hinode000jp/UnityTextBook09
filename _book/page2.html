@@ -1,0 +1,347 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Gitの基本的な使い方２ · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.19">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="page1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="page1.html">
+            
+                <a href="page1.html">
+            
+                    
+                    Gitの基本的な使い方１
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="page2.html">
+            
+                <a href="page2.html">
+            
+                    
+                    Gitの基本的な使い方２
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Gitの基本的な使い方２</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="gitの基本的な使い方２">Gitの基本的な使い方２</h1>
+<h2 id="リモートリポジトリとは">リモートリポジトリとは</h2>
+<p><br></p>
+<p>ローカルリポジトリは自身のパソコンなどに履歴を記録しておくものでした。</p>
+<p>一方リモートリポジトリとは、インターネット上もしくはその他のネットワーク上に履歴を記録しておくものです。</p>
+<p>他のメンバーと共同で作業を進めるためには、このようなリモートリポジトリを管理し、必要に応じてデータをアップロードしたり他の人が編集したデータを自身のパソコンに持ってきたりなどして作業を分担していくことになります。</p>
+<h2 id="githubを活用">GitHubを活用</h2>
+<p>Gitのリモートリポジトリを管理するホスティングサービスは数多く存在します。</p>
+<p>１番有名なものとしては「GitHub」があり、現在多くのエンジニアや企業で使われています。</p>
+<p><img src="img/image2-1.png" alt></p>
+<p>GitHub以外にも、「BitBucket」や「Backlog」、「Gitlab」など様々なホスティングサービスがあり、それぞれ特徴があるので予算や用途などに合わせて１番良いホスティングサービスを探してみて下さい。</p>
+<p>今回は無料でも使用できる「GitHub」でリモートリポジトリを管理していきたいと思います。</p>
+<h2 id="githubアカウントを作成">GitHubアカウントを作成</h2>
+<p>まずは<a href="https://github.com/" target="_blank">GitHubのサイト</a>へアクセスします。すでにGitHubアカウントを持ってる方はこちらは飛ばして下さい。</p>
+<p><img src="img/image2-2.png" alt></p>
+<p>そこで</p>
+<ol>
+<li>ユーザー名</li>
+<li>メールアドレス</li>
+<li>パスワード</li>
+</ol>
+<p>を登録し、「Sign up for GitHub」をクリックします。</p>
+<p><img src="img/image2-3.png" alt></p>
+<p>次にプランの選択画面が出るので、「Free」を選択して指示にしたがって必要事項を記入していきます。</p>
+<p>登録が終わると、GitHubから登録したメールアドレスに確認メールが届くので、そのメール内にある「Verify email address」ボタンを押してください。そうしますと、GitHubのページと、「Welcom to GitHub」というメールが届いてGitHubへの登録は完了です。</p>
+<p><br></p>
+<h2 id="新規リモートリポジトリの作成">新規リモートリポジトリの作成</h2>
+<p>登録が完了したら、チュートリアルのためのリモートリポジトリを作成したいと思います。</p>
+<p>まずはGitHubのトップページから画面の右上の「＋」ボタンを押して「New repository」を選択して下さい。</p>
+<p><img src="img/image2-4.png" alt></p>
+<p>次に、下のような画面になったらリポジトリ名を記述します。今回は「GitTutorial」という名前でリポジトリを作成します。</p>
+<p class="warning">
+今回はサンプルとして「GitTutorial」という名前のリモートリポジトリ にしましたが、実際に自分のプロジェクトで使用する場合は自身のプロジェクト名などにしてください。
+</p>
+
+
+<p><img src="img/image2-5.png" alt></p>
+<p>Descriptionはこのリモートリポジトリの説明などを記載します。</p>
+<p>次にPublicかPrivateを選択できます。以前はPrivateは有料版のみでしたが現在は無料版でもPrivate（非公開）のリポジトリを作成することができます。</p>
+<p>その下のチェックボックスでREADMEを追加するかどうかを選択できます。READMEにはこのリポジトリの概要や使い方などを記載できます。</p>
+<p>​</p>
+<p>今回はリポジトリ名以外は変更せず進めていきたいと思います。</p>
+<p>リポジトリ名を「GitTutorial」にして、下の「Create repository」をクリックして下さい。</p>
+<p><img src="img/image2-6.png" alt></p>
+<p>そうしますと、このような画面になったかと思います。
+これで新規のリモートリポジトリを作成することができました。</p>
+<hr>
+<h2 id="リモートリポジトリにプッシュしてみる">リモートリポジトリにプッシュしてみる</h2>
+<p>では早速新規作成したリモートリポジトリにプロジェクトをアップロードしていきたいと思います。</p>
+<p>リモートリポジトリで自分の手元のローカルリポジトリの変更履歴を共有するには、ローカルリポジトリ内の変更履歴をアップロードする必要があります。Gitではこのアップロードする操作のことをPushと呼んでいます。Pushを実行するとリモートリポジトリに自分の変更履歴がアップロードされて、リモートリポジトリ内の変更履歴がローカルリポジトリの変更履歴と同じ状態になります。</p>
+<p>まずは先ほどGitHubで作成したリモートリポジトリのページから</p>
+<p><img src="img/image2-7.png" alt></p>
+<p>こちらのURLをコピーしておきます。左側に「HTTPS」か「SSH」を選択できるタブがあるのですが、今回は「HTTPS」の方を選択して下さい。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="page1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Gitの基本的な使い方１">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Gitの基本的な使い方２","level":"1.3","depth":1,"previous":{"title":"Gitの基本的な使い方１","level":"1.2","depth":1,"path":"page1.md","ref":"./page1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page2.md","mtime":"2021-04-24T10:02:23.493Z","type":"markdown"},"gitbook":{"version":"3.6.19","time":"2021-04-24T10:04:58.634Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

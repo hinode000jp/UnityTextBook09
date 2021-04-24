@@ -2,6 +2,6 @@
 
 * [Introduction](README.md)
 
-* [Gitの基本的な使い方](./page1.md)
+* [Gitの基本的な使い方１](./page1.md)
 
-<!-- * [VRメニューの作成](./page2.md) -->
+* [Gitの基本的な使い方２](./page2.md)
